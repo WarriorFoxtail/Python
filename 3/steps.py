@@ -15,6 +15,9 @@ for day in days:
     print(f"On {day} you took {steps[index]}")
     index+=1
 
+#displaying the total number of steps taken
+print(f"You took {total} steps in total.")
+
 #computing the average of steps taken per day
 average=total/len(steps)
 print(f"You walked an average of {average:.1f} steps per day.")
