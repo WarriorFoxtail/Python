@@ -19,5 +19,3 @@ def main():
     print(f"Total amount after {days} days: ${total_amount:,.2f}")
 
 main()
-
-def factorial(n):
