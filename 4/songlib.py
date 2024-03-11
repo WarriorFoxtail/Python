@@ -1,12 +1,12 @@
 #defining the function
 def custom_song(noun, disaster, body, environment, being, verb, direction, weather):
-    print("Is this the real {noun}? Is this just fantasy?")
-    print("Caught in a {disaster}, no escape from reality")
-    print("Open your {body}, look up to the {environment} and see")
-    print("I'm just a poor {being}, I need no sympathy")
-    print("Because I'm easy {verb}, easy go, little {direction}, little low")
-    print("Any way the {weather} blows, doesn't really matter to me")
-    print("To me")
+    print(f"Is this the real {noun}? Is this just fantasy?")
+    print(f"Caught in a {disaster}, no escape from reality")
+    print(f"Open your {body}, look up to the {environment} and see")
+    print(f"I'm just a poor {being}, I need no sympathy")
+    print(f"Because I'm easy {verb}, easy go, little {direction}, little low")
+    print(f"Any way the {weather} blows, doesn't really matter to me")
+    print(f"To me")
 
 #getting user input
 def user_input():
