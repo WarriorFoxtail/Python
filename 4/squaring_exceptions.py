@@ -4,8 +4,13 @@ def square_number():
     squared_number = int(number) ** 2
     print(f"The square of {number} is {squared_number}.")
 
-try:
-    square_number()
-except ValueError:
-    print("Whoops! You must input an integer. Please try again.")
-    
+#initializing the try except block
+def main():
+    try: #testing the function
+        square_number()
+    except ValueError: #accounting for potential value errors
+        print("Whoops! You must input an integer. Please try again.")
+        main()
+
+#calling the main function
+main()
