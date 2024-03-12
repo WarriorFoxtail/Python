@@ -4,4 +4,8 @@ def square_number():
     squared_number = int(number) ** 2
     print(f"The square of {number} is {squared_number}.")
 
-square_number()
+try:
+    square_number()
+except ValueError:
+    print("Whoops! You must input an integer. Please try again.")
+    
