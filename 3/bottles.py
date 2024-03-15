@@ -2,16 +2,16 @@
 count=100
 
 #initializing the while loop
-while count<100:
-    print(count, "bottles of beer on the wall")
-    print(count, "bottles of beer")
-    print("Take one down, pass it around")
-    count+=1 #changing the count as ech bottle is removed
-    print(count, "bottles of beer on the wall")
-
-#changing the words to match the single remaining bottle
-if count<2:
-    print(count, "bottle of beer on the wall")
-    print(count, "bottle of beer")
-    print("Take it down, pass it around")
-    print("No more bottles of beer on the wall")
+while count>1: #iterates the loop as long as the count is greater than 1
+    print(count, "bottles of beer on the wall,")
+    print(count, "bottles of beer!")
+    print("Take one down, pass it around,")
+    count-=1 #decreasing the count as each bottle is removed
+    if count>1: #changing the lyrics to singular in second to last stanza
+        print(count, "bottles of beer on the wall!\n")
+    elif count==1:
+        print(count, "bottle of beer on the wall!\n")
+        print(count, "bottle of beer on the wall,")
+        print(count, "bottle of beer!")
+        print("Take it down, pass it around,")
+        print("No more bottles of beer on the wall!")
