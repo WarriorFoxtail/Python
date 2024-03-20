@@ -17,20 +17,19 @@ def main():
     valid=False #changes to true if all conditions are met
     while not valid:
         valid=True #will change to false if ANY requirements are not met
-        print("""Password Requirements:\n
-              Between 8 to 20 characters.\n
-              Contains at least one uppercase letter.\n
-              Contains at least one lowercase letter.\n
-              Includes at least one number.\n
+        print("""Password Requirements:
+              Between 8 to 20 characters.
+              Contains at least one uppercase letter.
+              Contains at least one lowercase letter.
+              Includes at least one number.
               Includes at least one special character from the set: !@#$%&*\n""")
         
         password=input("Please enter a password that meets the criteria above: ")
+        print()
 
         #checking the length
         length=len(password)
-        if 7<length<21: #continues to next step if password is correct length
-            continue
-        elif length<8: #if password is too short
+        if length<8: #if password is too short
             valid=False
             print("Whoops! That password isn't long enough. Please try again.")
         elif length>20: #if password is too long
@@ -41,35 +40,37 @@ def main():
         is_upper=False #changes to true if found
         #for loop to iterate through input to find uppercase character
         for char in password:
-            if char.upper==True:
-                is_upper==True
-                continue
+            if char.isupper()==True:
+                is_upper=True
+                break
         if is_upper==False: #for if a lowercase letter isn't found
-            valid==False
-            print("Sorry! You must include an uppercase letter.")
+            valid=False
+            print("Whoops! You must include an uppercase letter.")
 
         #checking for lowercase letters
         is_lower=False #changes to true if found
         #for loop to iterate through input to find lowercase character
         for char in password:
-            if char.lower==True:
-                is_lower==True
-                continue
-        if is_upper==False: #for if an uppercase letter isn't found
-            valid==False
-            print("Sorry! You must include a lowercase letter.")
+            if char.islower()==True:
+                is_lower=True
+                break
+        if is_lower==False: #for if an uppercase letter isn't found
+            valid=False
+            print("Whoops! You must include a lowercase letter.")
 
         #checking for numbers
         has_number=False #will change if a number is found
-        number=['!', '@', '#', '$', '%', '&', '*'] #creating a list of number options
+        number=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] #creating a list of number options
         for n in number:
             for cha in password:
                 if n==cha:
-                    has_number==True
-                    continue
+                    has_number=True
+                    break
+            if has_number==True:
+                break
         if has_number==False: #for if there isn't a number in the password
             valid=False
-            print("Sorry! You must include a number.")
+            print("Whoops! You must include a number.")
         
         #checking for symbols
         has_symbol=False #will change if a symbol is found
@@ -77,17 +78,22 @@ def main():
         for s in symbol:
             for c in password:
                 if s==c:
-                    has_symbol==True
-                    continue
+                    has_symbol=True
+                    break
+            if has_symbol==True:
+                break
         if has_symbol==False: #for if there isn't a symbol in the password
             valid=False
-            print("Sorry! You must include a symbol.")
-
+            print("Whoops! You must include a symbol.")
+        if valid==False:
+            print()
     if valid==True:
         confirmed=input("Please re-enter your password to confirm: ")
+        print()
     if confirmed==password:
         print("Your password is set!")
     else:
-        print("Sorry! Your passwords don't match.")
+        print("Whoops! Your passwords don't match.\n")
+        main()
 
 main()
