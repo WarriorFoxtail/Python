@@ -3,7 +3,7 @@ def main():
     #setting up an empty list for book titles
     books=[]
     #initializing while loop
-    while len(books)<4: #will iterate until 10 titles are entered
+    while len(books)<10: #will iterate until 10 titles are entered
         #getting book titles from user
         titles=input("Please enter a book title: ").title() #esures the titles are properly capitalized
         books.append(titles) #appends titles to empty list
