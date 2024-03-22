@@ -12,7 +12,7 @@ def main():
         flowers.append(flower) #adds each flower name to list
     
     #sorts the list of flowers
-    flowers.sort()
+    flowers.sort() #test
     #for loop to iterate through each flower in the sorted list
     for plant in flowers:
         print(f"{flowers.index(plant)+1}. {plant}") #adjusts index number to start at 1 then displays each flower on a new line
