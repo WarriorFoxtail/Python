@@ -44,15 +44,22 @@ class Student:
         print(self.__student_id)
         print(self.__grade_level)
 
+def check_property(studentObject):
+    print(hasattr(studentObject, "first_name"))
+
 def main():
     ducktor_quacks = Student("Meri", "Quacksalot", '009234', "Super Senior")
     print("\n")
     print(ducktor_quacks.get_first_name())
-    print(ducktor_quacks.print_student_details())
-    print(ducktor_quacks.print_info())
+    ducktor_quacks.print_student_details()
+    ducktor_quacks.print_info()
 
     print("\n")
     ducktor_quacks.set_grade_level("Ducktorate")
-    print(ducktor_quacks.print_info())
+    ducktor_quacks.print_info()
+
+    print("\n")
+    print(hasattr(ducktor_quacks, "first_name"))
+    check_property(ducktor_quacks)
 
 main()
