@@ -20,15 +20,13 @@ def main():
     #getting user input to search for a specific flower
     search=input("Please enter the name of the flower you wish to search for: ")
     #if statement to check if the input flower is in the list
-    while search in flowers:
+    if search in flowers:
         print(f"Yes! It looks like {search} is part of this list.") #if the searched flower is in the list
         number=int(input("Please enter the number of the flower you wish to search for: "))
         try:
             number==flowers.index(plant)+1
         except ValueError:
             print("The value must be an integer.")
-        
-
     else:
         print(f"Sorry! It looks like {search} is not part of this list. Please try again.") #if the searched flower is not in the list
         search=input("Please enter the name of the flower you wish to search for: ") #asks for input again
