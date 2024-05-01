@@ -2,22 +2,43 @@
     CRUD practice
 """
 
+def main_menu():
+    #present menu
+    #check values
+    #return choice
+    main()
+
 def check():
+    #read file to list
+    #if the file isn't there, create an empty customer list
+    #return customer list
     print("Check for file")
+    main()
 
 def create():
+    #create a new entry
+    #call save()
     print("Create")
 
 def read():
+    #call search()
+    #will display the found record
     print("Read")
 
+def search():
+    #called by read(), update(), delete()
+    #returns record, index
+    print("Search")
+
 def update():
+    
     print("Update")
 
 def delete():
     print("Delete")
 
 def save():
+    #save the file
     print("Save")
 
 def main():
